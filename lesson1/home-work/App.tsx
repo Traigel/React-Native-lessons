@@ -12,7 +12,7 @@ import {
     Pressable,
     ListRenderItem,
     FlatList,
-    ScrollView
+    ScrollView, ImageSourcePropType
 } from 'react-native';
 
 // //@ts-ignore
@@ -22,9 +22,12 @@ const {width} = Dimensions.get('screen')
 
 const WIDTH = width
 
+const img = [require('./assets/brands/1.jpg'), require('./assets/brands/2.jpg'), require('./assets/brands/3.jpg'), require('./assets/brands/4.jpg')]
+
 const brands = new Array(4).fill(null).map((el, index) => ({
     id: index + 1,
-    imgUrl: `./assets/brands/${index + 1}.jpg`
+    //imgUrl: require(`./assets/brands/2.jpg`)
+    imgUrl: img[index],
 }))
 
 const catalogTitle = ['Bumpers & Components', 'Fenders & Components', 'Hoods & Components',
@@ -32,7 +35,7 @@ const catalogTitle = ['Bumpers & Components', 'Fenders & Components', 'Hoods & C
     'Seats, Seat Covers & Accessories', 'Shocks, Struts & Components', 'Other spare parts']
 
 
-const catalog = new Array(10).fill(null).map((_, index) => ({
+const catalog: CatalogType[] = new Array(10).fill(null).map((_, index) => ({
     id: index + 1,
     title: catalogTitle[index],
     img: `./assets/brands/${index + 1}.jpg`
@@ -40,13 +43,13 @@ const catalog = new Array(10).fill(null).map((_, index) => ({
 
 type BrandsType = {
     id: number
-    imgUrl: string
+    imgUrl: ImageSourcePropType
 }
 
 type CatalogType = {
     id: number
     title: string
-    ing: string
+    img: string
 }
 
 export default function App() {
@@ -67,7 +70,7 @@ export default function App() {
                     height: 35,
                     paddingVertical: 30
                 }}
-                source={require(`./assets/brands/1.jpg`)}
+                source={item.imgUrl}
             />
         </View>
     }
@@ -247,6 +250,7 @@ const styles = StyleSheet.create({
         height: 120,
         marginVertical: 20,
         borderRadius: 5,
+
     },
     brandsBox: {
         width: '100%',
