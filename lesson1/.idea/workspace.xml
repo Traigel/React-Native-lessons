@@ -8,15 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76e35620-e47c-492a-8a51-68e38fa64f4a" name="Changes" comment="lesson 1 - home-work, start app">
-      <change afterPath="$PROJECT_DIR$/../lesson3/my-app/src/screens/Details/Details.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson3/my-app/src/screens/Home/Home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson3/my-app/src/screens/Jobs/Jobs.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson3/my-app/src/screens/Main.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson3/my-app/src/screens/Profile/Profile.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson3/my-app/src/screens/Settings/Settings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson3/my-app/src/screens/Users/Users.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson3/my-app/src/screens/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home-work/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/home-work/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
