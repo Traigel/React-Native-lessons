@@ -1,8 +1,10 @@
 import React, {useState} from "react"
-import {Button, StyleSheet, Text, TextInput, View} from "react-native"
+import {Button, Dimensions, StyleSheet, Text, TextInput, View} from "react-native"
 import {useAppNavigation} from "../types"
-import {WIDTH} from '../../../App';
 import {TouchableHighlight} from "react-native";
+
+const {width} = Dimensions.get('screen')
+const WIDTH = width
 
 export function LoginScreen() {
 
@@ -16,19 +18,19 @@ export function LoginScreen() {
 
         <TextInput
             style={styles.input}
-            onChangeText={setValueEmail}
             value={valueEmail}
+            onChangeText={setValueEmail}
             placeholder={'Email'}
         />
         <TextInput
             style={styles.input}
-            onChangeText={setValuePassword}
             value={valuePassword}
+            onChangeText={setValuePassword}
             placeholder={'Password'}
         />
-        <Button title={'Login'} onPress={() => {
-            navigation.navigate('MainHome', {screen: 'Home'})
-        }}/>
+        {/*<Button title={'Login'} onPress={() => {*/}
+        {/*    navigation.navigate()*/}
+        {/*}}/>*/}
 
         <Text>Forgot Password? </Text>
         <TouchableHighlight

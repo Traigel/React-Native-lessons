@@ -1,7 +1,9 @@
 import React, {useState} from "react"
-import {Button, StyleSheet, Text, TextInput, View} from "react-native"
+import {Button, Dimensions, StyleSheet, Text, TextInput, View} from "react-native"
 import {useAppNavigation} from "../types"
-import {WIDTH} from '../../../App';
+
+const {width} = Dimensions.get('screen')
+const WIDTH = width
 
 export function RecPasswordScreen() {
 
@@ -14,8 +16,8 @@ export function RecPasswordScreen() {
 
         <TextInput
             style={styles.input}
-            onChangeText={setValueEmail}
             value={valueEmail}
+            onChangeText={setValueEmail}
             placeholder={'Email'}
         />
         <Button title={'Show password'} onPress={() => {

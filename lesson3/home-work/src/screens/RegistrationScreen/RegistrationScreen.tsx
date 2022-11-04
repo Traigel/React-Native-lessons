@@ -1,7 +1,9 @@
 import React, {useState} from "react"
-import {Button, StyleSheet, Text, TextInput, View} from "react-native"
+import {Button, Dimensions, StyleSheet, Text, TextInput, View} from "react-native"
 import {useAppNavigation} from "../types"
-import {WIDTH} from '../../../App';
+
+const {width} = Dimensions.get('screen')
+const WIDTH = width
 
 export function RegistrationScreen() {
 
@@ -15,20 +17,20 @@ export function RegistrationScreen() {
         <Text>Create an account</Text>
         <TextInput
             style={styles.input}
-            onChangeText={setValueUsername}
             value={valueUsername}
+            onChangeText={setValueUsername}
             placeholder={'Username'}
         />
         <TextInput
             style={styles.input}
-            onChangeText={setValueEmail}
             value={valueEmail}
+            onChangeText={setValueEmail}
             placeholder={'Email'}
         />
         <TextInput
             style={styles.input}
-            onChangeText={setValuePassword}
             value={valuePassword}
+            onChangeText={setValuePassword}
             placeholder={'Password'}
         />
         <Button title={'Sign Up'} onPress={() => {
